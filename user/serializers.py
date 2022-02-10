@@ -1,13 +1,16 @@
 from django.contrib.auth import get_user_model, authenticate
+from core.models import GlobalContact
 
 from rest_framework import serializers
 from django.utils.translation import ugettext_lazy as _
+
+from core.models import GlobalContact
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
-        fields = ["phone_number", "password", "name"]
+        fields = ["phone_number", "password", "name", "email"]
         extra_kwargs = {
             "password": {"write_only": True, "min_length": 5},
             "phone_number": {"min_length": 10, "max_length": 10},
@@ -15,6 +18,34 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return get_user_model().objects.create_user(**validated_data)
+
+
+class UserUpdateSerializer(UserSerializer):
+    class Meta:
+        model = get_user_model()
+        fields = ["password", "name", "email"]
+        extra_kwargs = {
+            "password": {"write_only": True, "required": False, "min_length": 5},
+        }
+
+    def update(self, instance, validated_data):
+        password = validated_data.pop("password", None)
+        user = super().update(instance, validated_data)
+
+        if password:
+            user.set_password(password)
+            user.save()
+
+        return user
+
+class GlobalContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GlobalContact
+        exclude = ["owner"]
+# class GlobalContactListSerializer(serializers.ListSerializer):
+
+#     contacts = GlobalContctSerializer(many=True)
+#     def up 
 
 
 class AuthTokenSerializer(serializers.Serializer):

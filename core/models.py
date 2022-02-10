@@ -31,3 +31,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     objects = UserManager()
     USERNAME_FIELD = "phone_number"
+
+
+class GlobalContact(models.Model):
+    phone_number = models.CharField(max_length=10, blank=False, null=False)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    email = models.EmailField(max_length=512, blank=True, null=True)
+    owner = models.ForeignKey(User, on_delete=models.PROTECT,related_name="owner")
+    is_spam = models.BooleanField(default=False)

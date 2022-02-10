@@ -1,9 +1,9 @@
-from django.urls import path,include
+from django.urls import path, include
 from . import views
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register("",views.GlobalContactViewSet)
+router.register("", views.GlobalContactViewSet)
 app_name = "user"
 
 urlpatterns = [
@@ -18,5 +18,5 @@ urlpatterns = [
     ),
     path("add_contact/", views.AddContactView.as_view(), name="add_contact"),
     path("contacts/", include(router.urls)),
-    path("mark_spam/<str:number>/", views.MarkSpamApiView.as_view(), name="mark_spam")
-  ]
+    path("mark_spam/<str:number>/", views.MarkSpamApiView.as_view(), name="mark_spam"),
+]

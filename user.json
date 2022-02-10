@@ -1,0 +1,262 @@
+[
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$nFHuNdR3xPRwnNILf35v3x$Ncd/fFCyTMO6rFPE7t5NuIYKny1TPZHyt4VPqfjXOgk=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "newuser@gmail.com",
+    "name": "LAtetsuser",
+    "phone_number": "2345126523",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$TKwGw7LHjlRpRy07uyIrId$NPQG049rFsL2922kLxcfRQH51uGpFYzZRPTOFe5BcLw=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "jenna@gmail.com",
+    "name": "Jenna",
+    "phone_number": "2334125564",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$f7y900nYHdMNP7apoR6hoC$Zw9yU3h6vUvmo7Puwc1rNYdLVgLf2bMuHj5e2UmbCk0=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "johnLennon@gmail.com",
+    "name": "John",
+    "phone_number": "2345126565",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$MVqEkg92eIH1APSPddAq6r$n6J2Xtifdq0DgHuJXIcWDKG4jyQCGDFTE6xOf9oWFPQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "jimmyohnLennon@gmail.com",
+    "name": "Jimmy",
+    "phone_number": "2345128888",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$alXfswfCmzvlQg0CIBJlcx$yVhKUlzP79t3s9QKu58EEITaL2X9keL4xs/NEpYMFxc=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "gini@gmail.com",
+    "name": "Gini",
+    "phone_number": "2342341235",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$2bpeyk8kC5vkZbOWSYvje6$3gAIcKJj2tbdAMw+zEznfsQGupmn1otuci2LvJDLFCM=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "mini@gmail.com",
+    "name": "Mini",
+    "phone_number": "2342341278",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$uL1pr6NS7c3F1VrZwLZx3C$yf0rVKvwggKPBnuJFvpcsonvCBerJDbYZkkZPXQR0Ks=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "rani@gmail.com",
+    "name": "Rani",
+    "phone_number": "2342341346",
+    "is_active": true,
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 1,
+  "fields": {
+    "phone_number": "2345126523",
+    "name": "John",
+    "email": "johnLennon@gmail.com",
+    "owner": 1,
+    "is_spam": true
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 2,
+  "fields": {
+    "phone_number": "2334125564",
+    "name": "Jenna",
+    "email": "jenna@gmail.com",
+    "owner": 2,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 3,
+  "fields": {
+    "phone_number": "6205711842",
+    "name": "dabc",
+    "email": null,
+    "owner": 2,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 4,
+  "fields": {
+    "phone_number": "6205711842",
+    "name": "dabc",
+    "email": null,
+    "owner": 2,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 5,
+  "fields": {
+    "phone_number": "2345678897",
+    "name": "abcd",
+    "email": null,
+    "owner": 2,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 6,
+  "fields": {
+    "phone_number": "6205711842",
+    "name": "dabc",
+    "email": null,
+    "owner": 2,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 7,
+  "fields": {
+    "phone_number": "2345678897",
+    "name": "abcd",
+    "email": null,
+    "owner": 2,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 8,
+  "fields": {
+    "phone_number": "2345126565",
+    "name": "John",
+    "email": "johnLennon@gmail.com",
+    "owner": 3,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 9,
+  "fields": {
+    "phone_number": "2345128888",
+    "name": "Jimmy",
+    "email": "jimmyohnLennon@gmail.com",
+    "owner": 4,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 10,
+  "fields": {
+    "phone_number": "2342341235",
+    "name": "Gini",
+    "email": "gini@gmail.com",
+    "owner": 5,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 11,
+  "fields": {
+    "phone_number": "2342341278",
+    "name": "Mini",
+    "email": "mini@gmail.com",
+    "owner": 6,
+    "is_spam": false
+  }
+},
+{
+  "model": "core.globalcontact",
+  "pk": 12,
+  "fields": {
+    "phone_number": "2342341346",
+    "name": "Rani",
+    "email": "rani@gmail.com",
+    "owner": 7,
+    "is_spam": false
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "8d4e28be1ef1e7fefca791b7d4dbfc203d1bb726",
+  "fields": {
+    "user": 2,
+    "created": "2022-02-10T16:57:43.846Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "b69d88afffffacbb6f4a4da32fe123d5b2da7761",
+  "fields": {
+    "user": 1,
+    "created": "2022-02-10T16:48:04.008Z"
+  }
+}
+]

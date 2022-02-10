@@ -14,6 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "password": {"write_only": True, "min_length": 5},
             "phone_number": {"min_length": 10, "max_length": 10},
+            "name": {"max_length": 255},
         }
 
     def create(self, validated_data):
@@ -38,14 +39,11 @@ class UserUpdateSerializer(UserSerializer):
 
         return user
 
+
 class GlobalContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = GlobalContact
         exclude = ["owner"]
-# class GlobalContactListSerializer(serializers.ListSerializer):
-
-#     contacts = GlobalContctSerializer(many=True)
-#     def up 
 
 
 class AuthTokenSerializer(serializers.Serializer):

@@ -25,7 +25,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=512, unique=True, blank=True, null=True)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, blank=False, null=False)
     phone_number = models.CharField(max_length=10, unique=True, blank=False, null=False)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -37,5 +37,5 @@ class GlobalContact(models.Model):
     phone_number = models.CharField(max_length=10, blank=False, null=False)
     name = models.CharField(max_length=255, blank=True, null=True)
     email = models.EmailField(max_length=512, blank=True, null=True)
-    owner = models.ForeignKey(User, on_delete=models.PROTECT,related_name="owner")
+    owner = models.ForeignKey(User, on_delete=models.PROTECT, related_name="owner")
     is_spam = models.BooleanField(default=False)

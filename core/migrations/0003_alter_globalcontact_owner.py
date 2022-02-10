@@ -8,13 +8,17 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0002_globalcontact'),
+        ("core", "0002_globalcontact"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='globalcontact',
-            name='owner',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='owner', to=settings.AUTH_USER_MODEL),
+            model_name="globalcontact",
+            name="owner",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="owner",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

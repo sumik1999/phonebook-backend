@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0003_alter_globalcontact_owner'),
+        ("core", "0003_alter_globalcontact_owner"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='globalcontact',
-            name='name',
+            model_name="globalcontact",
+            name="name",
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
     ]
